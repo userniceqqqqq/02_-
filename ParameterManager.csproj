@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{85C1269E-3419-48D6-9FE6-2348848E9C7C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ParameterManager</RootNamespace>
+    <AssemblyName>ParameterManager</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EPPlus, Version=5.3.2.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>packages\EPPlus.5.3.2\lib\net45\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Xaml.Behaviors.Wpf.1.1.31\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero2" />
+    <Reference Include="Prism, Version=8.1.97.5141, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
+      <HintPath>packages\Prism.Core.8.1.97\lib\net47\Prism.dll</HintPath>
+    </Reference>
+    <Reference Include="Prism.Unity.Wpf, Version=8.1.97.5141, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
+      <HintPath>packages\Prism.Unity.8.1.97\lib\net47\Prism.Unity.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Prism.Wpf, Version=8.1.97.5141, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
+      <HintPath>packages\Prism.Wpf.8.1.97\lib\net47\Prism.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="QiShiLog, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\revit二开Demo_01_族库管理\QiShiLog.dll</HintPath>
+    </Reference>
+    <Reference Include="Revit.Async, Version=2.0.1.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>packages\Revit.Async.2.0.1\lib\net45\Revit.Async.dll</HintPath>
+    </Reference>
+    <Reference Include="RevitAPI">
+      <HintPath>..\..\..\Revit2020\Revit 2020\RevitAPI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI">
+      <HintPath>..\..\..\Revit2020\Revit 2020\RevitAPIUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.ComponentModel.Annotations.4.7.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks, Version=4.0.11.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Unity.Abstractions, Version=5.11.7.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>packages\Unity.Abstractions.5.11.7\lib\net47\Unity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Container, Version=5.11.11.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>packages\Unity.Container.5.11.11\lib\net47\Unity.Container.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CreateRibbonUI.cs" />
+    <Compile Include="Utils\LoadFamilySelectionFilter.cs" />
+    <Compile Include="Models\DataGrid\ParaCreateDataGridModel.cs" />
+    <Compile Include="Models\DataGrid\ParaImportDataGridModel.cs" />
+    <Compile Include="Utils\FamilyLoadOptions.cs" />
+    <Compile Include="Models\ComboBox\BoolAndComboModel.cs" />
+    <Compile Include="Events\DynamicColumnEvent.cs" />
+    <Compile Include="ExtEvent\GetUnitGroupToParameterType.cs" />
+    <Compile Include="Models\ComboBox\DisciplineAndComboModel.cs" />
+    <Compile Include="Models\ComboBox\ParaKindAndComboModel.cs" />
+    <Compile Include="Models\ComboBox\ParaTypeAndComboModel.cs" />
+    <Compile Include="Models\ComboBox\ParaGroupAndComboModel.cs" />
+    <Compile Include="Utils\TemplateGenerator.cs" />
+    <Compile Include="Utils\HelpEnum.cs" />
+    <Compile Include="Utils\HelpAttribute.cs" />
+    <Compile Include="Models\DataGrid\ParaDataGridModel.cs" />
+    <Compile Include="Utils\Helper.cs" />
+    <Compile Include="ExtEvent\LoadFamilyTreeSource.cs" />
+    <Compile Include="Models\TreeView\IBaseModel.cs" />
+    <Compile Include="Models\TreeView\CatagoryTreeNode.cs" />
+    <Compile Include="Models\TreeView\FamilyTreeNode.cs" />
+    <Compile Include="Models\ComboBox\CheckAndComboModel.cs" />
+    <Compile Include="ExtEvent\AddFamilyParameter.cs" />
+    <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Models\ComboBox\ComboModelBase.cs" />
+    <Compile Include="RevitPlugin.cs" />
+    <Compile Include="SysCache\SysCache.cs" />
+    <Compile Include="Utils\TreeViewHelper.cs" />
+    <Compile Include="ViewModels\FamilyParameterContentViewModel.cs" />
+    <Compile Include="ViewModels\MainWindowViewModel.cs" />
+    <Compile Include="ViewModels\Dialog\ModifyParaNameDialogViewModel.cs" />
+    <Compile Include="ViewModels\OtherParameterContentViewModel.cs" />
+    <Compile Include="ViewModels\Dialog\ParaCreateDialogViewModel.cs" />
+    <Compile Include="ViewModels\Dialog\ParaImportDialogViewModel.cs" />
+    <Compile Include="Views\Base\DialogWindowBase.xaml.cs">
+      <DependentUpon>DialogWindowBase.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FamilyParameterContentView.xaml.cs">
+      <DependentUpon>FamilyParameterContentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dialog\ModifyParaNameDialogView.xaml.cs">
+      <DependentUpon>ModifyParaNameDialogView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dialog\ParaCreateDialogView.xaml.cs">
+      <DependentUpon>ParaCreateDialogView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Base\ParaCreateDialogWindowBase.xaml.cs">
+      <DependentUpon>ParaCreateDialogWindowBase.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Base\ParaImportDialogWindowBase.xaml.cs">
+      <DependentUpon>ParaImportDialogWindowBase.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dialog\ParaImportDialogView.xaml.cs">
+      <DependentUpon>ParaImportDialogView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OtherParameterContentView.xaml.cs">
+      <DependentUpon>OtherParameterContentView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Views\Base\DialogWindowBase.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FamilyParameterContentView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Dialog\ModifyParaNameDialogView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Dialog\ParaCreateDialogView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Base\ParaCreateDialogWindowBase.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Base\ParaImportDialogWindowBase.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Dialog\ParaImportDialogView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\OtherParameterContentView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\DiscipToParaTypeToGroup.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\EditableBuiltInParameterGroup.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Assets\参数管理_橙32.png" />
+    <Resource Include="Assets\参数管理_橙.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
