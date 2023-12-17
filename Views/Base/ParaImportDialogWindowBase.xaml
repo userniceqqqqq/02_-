@@ -1,0 +1,15 @@
+﻿<Window x:Class="ParameterManager.Views.ParaImportDialogWindowBase"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ParameterManager.Views"
+        mc:Ignorable="d"
+        Title="参数导入" Icon="/ParameterManager;component/Assets/参数管理_橙.png" Height="600" Width="450" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Topmost="True" ShowActivated="True">
+    <Window.Resources>
+        <SolidColorBrush x:Key="{x:Static SystemColors.ControlTextBrushKey }" Color="#11233B"/>
+    </Window.Resources>
+    <Grid>
+        
+    </Grid>
+</Window>
